@@ -37,22 +37,20 @@ body {
   background-color: var(--color-bg);
   line-height: 1.65;
   overflow-x: hidden;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.95;
-  background-image:
-    repeating-radial-gradient(ellipse 520px 250px at -8% 18%, transparent 0 62px, rgba(183, 119, 93, 0.2) 63px 65px, transparent 66px 100%),
-    repeating-radial-gradient(ellipse 620px 300px at 108% 58%, transparent 0 78px, rgba(110, 127, 94, 0.18) 79px 81px, transparent 82px 100%),
-    radial-gradient(ellipse 500px 230px at 18% 94%, transparent 0 70%, rgba(152, 101, 81, 0.16) 70.3% 71%, transparent 71.4%);
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
 }
 
 header, main, footer { position: relative; z-index: 1; }
+
+header, footer { flex: 0 0 auto; }
+
+main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
 
 h1, h2, h3 {
   font-family: var(--font-heading);
@@ -78,29 +76,6 @@ section {
   isolation: isolate;
   scroll-margin-top: var(--anchor-offset);
   overflow: hidden;
-}
-
-section:not(.hero)::after {
-  content: "";
-  position: absolute;
-  top: 12%;
-  right: -110px;
-  z-index: 0;
-  width: 430px;
-  height: 430px;
-  pointer-events: none;
-  opacity: 0.16;
-  background-image: url("images/logo-symbol.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  mix-blend-mode: multiply;
-}
-
-section:nth-of-type(even)::after {
-  right: auto;
-  left: -110px;
-  transform: scaleX(-1);
 }
 
 section > .container { position: relative; z-index: 1; }
@@ -332,6 +307,7 @@ section > .container { position: relative; z-index: 1; }
   margin-top: 22px;
   padding: 13px 16px !important;
   border: 0 !important;
+  border-radius: 4px;
   background: var(--color-terracotta);
   color: #fff !important;
   text-align: center;
@@ -379,39 +355,11 @@ section > .container { position: relative; z-index: 1; }
 .hero {
   position: relative;
   overflow: hidden;
-  min-height: calc(100svh - var(--anchor-offset));
+  flex: 1 0 auto;
   padding: 80px 0 90px;
   background: linear-gradient(135deg, rgba(247, 241, 235, 0.94) 0%, rgba(243, 232, 224, 0.9) 100%);
   display: flex;
   align-items: center;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -150px;
-  width: 520px;
-  height: 520px;
-  transform: translateY(-50%);
-  pointer-events: none;
-  opacity: 0.13;
-  background: url("images/logo-symbol.png") center / contain no-repeat;
-  mix-blend-mode: multiply;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 36%;
-  left: -150px;
-  width: 520px;
-  height: 520px;
-  transform: translateY(-50%) scaleX(-1);
-  pointer-events: none;
-  opacity: 0.1;
-  background: url("images/logo-symbol.png") center / contain no-repeat;
-  mix-blend-mode: multiply;
 }
 
 .hero-inner {
@@ -457,9 +405,12 @@ section > .container { position: relative; z-index: 1; }
   padding: 20px 24px;
   border-top: 2px solid var(--color-brown-dark);
   border-bottom: 2px solid var(--color-brown-dark);
+  font-family: var(--font-heading);
+  font-style: italic;
   font-weight: 600;
-  font-size: 1.2rem;
-  color: var(--color-brown-dark);
+  font-size: 1.3rem;
+  color: var(--color-terracotta);
+  letter-spacing: 0.03em;
   max-width: 520px;
 }
 
@@ -924,16 +875,11 @@ section > .container { position: relative; z-index: 1; }
 @media (max-width: 599px) {
   .container { padding-left: 16px; padding-right: 16px; }
 
-  .hero {
-    min-height: calc(100svh - var(--anchor-offset));
-  }
-
   .hero-inner { width: 100%; min-width: 0; }
   .hero-sanitary { font-size: 1rem; }
   .hero-quote { font-size: 1.08rem; padding: 18px 20px; }
   .hero-visual { width: min(280px, 100%); height: 350px; flex-basis: auto; }
   .hero-circle { width: min(260px, 100%); height: 308px; }
-  .hero::before { display: none; }
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
@@ -981,4 +927,95 @@ section > .container { position: relative; z-index: 1; }
 @media (min-width: 769px) {
   .hero-visual { width: 420px !important; height: 470px !important; flex-basis: 420px !important; }
   .hero-circle { width: 320px !important; height: 410px !important; }
+}
+
+/* ---------- WhatsApp flotante ---------- */
+.whatsapp-float {
+  position: fixed;
+  right: 24px;
+  bottom: 90px;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-color: #25d366;
+  box-shadow: 0 8px 20px rgba(37, 63, 45, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float:hover,
+.whatsapp-float:focus-visible {
+  transform: scale(1.08);
+  box-shadow: 0 10px 26px rgba(37, 63, 45, 0.4);
+  text-decoration: none;
+}
+
+.whatsapp-float svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+}
+
+.whatsapp-tooltip {
+  position: absolute;
+  right: calc(100% + 14px);
+  top: 50%;
+  transform: translateY(-50%) translateX(8px);
+  white-space: nowrap;
+  background: var(--color-cream);
+  color: var(--color-brown-dark);
+  padding: 10px 18px;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(63, 42, 34, 0.14);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.whatsapp-float:hover .whatsapp-tooltip,
+.whatsapp-float:focus-visible .whatsapp-tooltip {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+@media (max-width: 599px) {
+  .whatsapp-float { right: 16px; bottom: 80px; width: 52px; height: 52px; }
+  .whatsapp-float svg { width: 27px; height: 27px; }
+  .whatsapp-tooltip { font-size: 0.82rem; padding: 8px 14px; right: calc(100% + 10px); }
+}
+
+/* ---------- Selector de idioma ---------- */
+.lang-switch {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.lang-btn {
+  flex: 1 1 auto;
+  padding: 8px 0;
+  border: 1px solid rgba(152, 101, 81, 0.28);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--color-brown-dark);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.lang-btn:hover { border-color: var(--color-terracotta); color: var(--color-terracotta); }
+
+.lang-btn.is-active {
+  background: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+  color: #fff;
 }
