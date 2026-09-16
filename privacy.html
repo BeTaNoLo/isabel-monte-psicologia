@@ -3,49 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Política de privacidad | Isabel Monte</title>
+<title data-i18n="privacy.meta.title">Política de privacidad | Isabel Monte</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="site-header">
   <div class="container header-inner">
-    <a href="index.html#inicio" class="logo-badge" aria-label="Ir al inicio">
-      <img src="images/logo.png" alt="Isabel Monte Psicóloga" class="site-logo">
+    <a href="index.html#inicio" class="logo-badge" aria-label="Ir al inicio" data-i18n-attr="aria-label:common.goHome">
+      <img src="images/logo.png" alt="Isabel Monte Psicóloga" class="site-logo" data-i18n-attr="alt:common.logoAlt">
     </a>
     <nav class="main-nav">
-      <a href="index.html#inicio">Volver a la web</a>
+      <div class="lang-switch" role="group" aria-label="Seleccionar idioma" data-i18n-attr="aria-label:common.langSelectLabel">
+        <button type="button" class="lang-btn" data-lang="es">ES</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="ca">CA</button>
+      </div>
+      <a href="index.html#inicio" data-i18n="privacy.navBack">Volver a la web</a>
     </nav>
   </div>
 </header>
 <main>
   <section class="section section-alt">
     <div class="container">
-      <h1>Política de privacidad</h1>
-      <p>Esta página informa sobre el tratamiento de los datos enviados mediante el formulario de contacto de Isabel Monte, Psicóloga Infanto-Juvenil.</p>
+      <h1 data-i18n="privacy.title">Política de privacidad</h1>
+      <p data-i18n="privacy.intro">Esta página informa sobre el tratamiento de los datos enviados mediante el formulario de contacto de Isabel Monte, Psicóloga Infanto-Juvenil.</p>
 
-      <h2>Responsable</h2>
-      <p>Responsable: Isabel Monte, Psicóloga Infanto-Juvenil. Para cualquier consulta relacionada con privacidad, puedes utilizar el formulario de contacto de la web.</p>
+      <h2 data-i18n="privacy.h1">Responsable</h2>
+      <p data-i18n="privacy.p1">Responsable: Isabel Monte, Psicóloga Infanto-Juvenil. Para cualquier consulta relacionada con privacidad, puedes utilizar el formulario de contacto de la web.</p>
 
-      <h2>Datos que se solicitan</h2>
-      <p>El formulario puede solicitar nombre, email, teléfono opcional y mensaje. Se recomienda no incluir información clínica o especialmente sensible en el primer contacto.</p>
+      <h2 data-i18n="privacy.h2">Datos que se solicitan</h2>
+      <p data-i18n="privacy.p2">El formulario puede solicitar nombre, email, teléfono opcional y mensaje. Se recomienda no incluir información clínica o especialmente sensible en el primer contacto.</p>
 
-      <h2>Finalidad y base legal</h2>
-      <p>Los datos se utilizan únicamente para responder a la consulta y, cuando proceda, contactar para informar sobre una primera cita. La base legal es el consentimiento de la persona interesada.</p>
+      <h2 data-i18n="privacy.h3">Finalidad y base legal</h2>
+      <p data-i18n="privacy.p3">Los datos se utilizan únicamente para responder a la consulta y, cuando proceda, contactar para informar sobre una primera cita. La base legal es el consentimiento de la persona interesada.</p>
 
-      <h2>Destinatarios y conservación</h2>
-      <p>El mensaje se envía mediante FormSubmit, proveedor técnico del formulario. Los datos se conservarán únicamente durante el tiempo necesario para gestionar la solicitud y cumplir las obligaciones aplicables.</p>
+      <h2 data-i18n="privacy.h4">Destinatarios y conservación</h2>
+      <p data-i18n="privacy.p4">El mensaje se envía mediante FormSubmit, proveedor técnico del formulario. Los datos se conservarán únicamente durante el tiempo necesario para gestionar la solicitud y cumplir las obligaciones aplicables.</p>
 
-      <h2>Derechos</h2>
-      <p>Puedes solicitar el acceso, rectificación, supresión, limitación u oposición al tratamiento de tus datos, así como retirar tu consentimiento, utilizando el formulario de contacto.</p>
+      <h2 data-i18n="privacy.h5">Derechos</h2>
+      <p data-i18n="privacy.p5">Puedes solicitar el acceso, rectificación, supresión, limitación u oposición al tratamiento de tus datos, así como retirar tu consentimiento, utilizando el formulario de contacto.</p>
 
-      <p><strong>Nota:</strong> este texto es un borrador informativo y debe revisarse con los datos fiscales y profesionales definitivos antes de publicar la web.</p>
+      <p data-i18n-html="privacy.note"><strong>Nota:</strong> este texto es un borrador informativo y debe revisarse con los datos fiscales y profesionales definitivos antes de publicar la web.</p>
     </div>
   </section>
 </main>
 <footer class="site-footer">
   <div class="container footer-inner">
-    <p><a href="index.html">Volver a Isabel Monte</a></p>
+    <p><a href="index.html" data-i18n="privacy.footerBack">Volver a Isabel Monte</a></p>
   </div>
 </footer>
+
+<script src="js/i18n.js"></script>
+
+<a href="https://wa.me/34614727300" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" data-i18n-attr="aria-label:common.whatsappAria">
+  <span class="whatsapp-tooltip" data-i18n="whatsapp.tooltip">¡Hola, soy Isabel! ¿Hablamos?</span>
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.362.687 4.564 1.874 6.418L4 29l7.77-1.84A11.94 11.94 0 0 0 16 27c6.627 0 12-5.373 12-12S22.628 3 16.001 3zm0 21.6c-1.86 0-3.59-.51-5.08-1.4l-.364-.217-4.61 1.092 1.108-4.49-.238-.377A9.56 9.56 0 0 1 5.4 15c0-5.85 4.75-10.6 10.6-10.6S26.6 9.15 26.6 15 21.85 24.6 16.001 24.6zm5.78-7.93c-.317-.159-1.874-.925-2.164-1.03-.29-.106-.502-.159-.713.16-.212.317-.82 1.03-1.005 1.24-.185.212-.37.238-.687.08-.317-.16-1.336-.492-2.545-1.57-.94-.838-1.575-1.874-1.76-2.19-.185-.318-.02-.49.14-.649.144-.144.318-.37.476-.556.159-.185.212-.318.318-.53.106-.212.053-.397-.026-.556-.08-.16-.713-1.719-.978-2.354-.257-.617-.518-.534-.713-.544l-.607-.011c-.212 0-.556.08-.847.397-.29.318-1.11 1.084-1.11 2.644 0 1.56 1.137 3.067 1.296 3.279.159.212 2.24 3.42 5.43 4.797.759.328 1.35.524 1.812.671.762.243 1.454.209 2.002.127.611-.091 1.874-.766 2.138-1.505.264-.74.264-1.373.185-1.505-.08-.132-.29-.212-.607-.37z"/>
+  </svg>
+</a>
+
 </body>
 </html>

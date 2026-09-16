@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sobre mí | Isabel Monte, Psicóloga Infanto-Juvenil</title>
-<meta name="description" content="Isabel Monte, psicóloga especializada en infancia, adolescencia y dificultades del neurodesarrollo. Atiendo en consulta en Alhendín (Granada) y también ofrezco sesiones online.">
-<meta property="og:title" content="Sobre mí | Isabel Monte">
-<meta property="og:description" content="Conoce a Isabel Monte, psicóloga infanto-juvenil.">
+<title data-i18n="aboutMe.meta.title">Sobre mí | Isabel Monte, Psicóloga Infanto-Juvenil</title>
+<meta name="description" content="Isabel Monte, psicóloga especializada en infancia, adolescencia y dificultades del neurodesarrollo. Atiendo en consulta en Alhendín (Granada) y también ofrezco sesiones online." data-i18n-attr="content:aboutMe.meta.description">
+<meta property="og:title" content="Sobre mí | Isabel Monte" data-i18n-attr="content:aboutMe.meta.ogTitle">
+<meta property="og:description" content="Conoce a Isabel Monte, psicóloga infanto-juvenil." data-i18n-attr="content:aboutMe.meta.ogDescription">
 <meta property="og:image" content="../images/logo.png">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/png" href="../images/logo.png">
@@ -17,23 +17,28 @@
 <header class="site-header">
   <div class="container header-inner">
     <div class="brand-lockup">
-      <a href="../index.html#inicio" class="logo-badge" aria-label="Ir al inicio">
-        <img src="../images/logo.png" alt="Isabel Monte Psicóloga" class="site-logo">
+      <a href="../index.html#inicio" class="logo-badge" aria-label="Ir al inicio" data-i18n-attr="aria-label:common.goHome">
+        <img src="../images/logo.png" alt="Isabel Monte Psicóloga" class="site-logo" data-i18n-attr="alt:common.logoAlt">
       </a>
       <div class="brand-copy">
         <strong>Isabel Monte</strong>
-        <span>Psicóloga Infanto-Juvenil</span>
+        <span data-i18n="common.brandTagline">Psicóloga Infanto-Juvenil</span>
       </div>
     </div>
     <nav class="main-nav">
-      <a href="../index.html#inicio" data-tooltip="Volvamos al inicio">Inicio</a>
-      <a href="specialties.html" data-tooltip="Conoce mis especialidades">Especialidades</a>
-      <a href="benefits.html" data-tooltip="Descubre cómo puede ayudar la terapia">Por qué la terapia</a>
-      <a href="about-me.html" data-tooltip="Conoce un poco más sobre mí">Sobre mí</a>
-      <a href="modality.html" data-tooltip="Presencial u online">Cómo trabajo</a>
-      <a href="blog.html" data-tooltip="Ideas para cuidar el bienestar">Blog</a>
-      <a href="contact.html" data-tooltip="Estoy aquí para escucharte">Contacto</a>
-      <a href="contact.html" class="nav-panel-cta" data-tooltip="Damos el primer paso juntas">Pedir cita</a>
+      <div class="lang-switch" role="group" aria-label="Seleccionar idioma" data-i18n-attr="aria-label:common.langSelectLabel">
+        <button type="button" class="lang-btn" data-lang="es">ES</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="ca">CA</button>
+      </div>
+      <a href="../index.html#inicio" data-tooltip="Volvamos al inicio" data-i18n="nav.home" data-i18n-attr="data-tooltip:nav.homeTooltip">Inicio</a>
+      <a href="specialties.html" data-tooltip="Conoce mis especialidades" data-i18n="nav.specialties" data-i18n-attr="data-tooltip:nav.specialtiesTooltip">Especialidades</a>
+      <a href="benefits.html" data-tooltip="Descubre cómo puede ayudar la terapia" data-i18n="nav.benefits" data-i18n-attr="data-tooltip:nav.benefitsTooltip">Por qué la terapia</a>
+      <a href="about-me.html" data-tooltip="Conoce un poco más sobre mí" data-i18n="nav.aboutMe" data-i18n-attr="data-tooltip:nav.aboutMeTooltip">Sobre mí</a>
+      <a href="modality.html" data-tooltip="Presencial u online" data-i18n="nav.modality" data-i18n-attr="data-tooltip:nav.modalityTooltip">Cómo trabajo</a>
+      <a href="blog.html" data-tooltip="Ideas para cuidar el bienestar" data-i18n="nav.blog" data-i18n-attr="data-tooltip:nav.blogTooltip">Blog</a>
+      <a href="contact.html" data-tooltip="Estoy aquí para escucharte" data-i18n="nav.contact" data-i18n-attr="data-tooltip:nav.contactTooltip">Contacto</a>
+      <a href="contact.html" class="nav-panel-cta" data-tooltip="Damos el primer paso juntas" data-i18n="nav.cta" data-i18n-attr="data-tooltip:nav.ctaTooltip">Pedir cita</a>
     </nav>
     <button class="menu-toggle" type="button" aria-controls="mainMenu" aria-expanded="false" aria-label="Abrir menú">
       <span></span><span></span><span></span>
@@ -46,13 +51,13 @@
 
   <section id="sobre-mi" class="section section-alt">
     <div class="container about-inner">
-      <img class="about-photo" src="../images/isabel-foto.jpg" alt="Isabel Monte, psicóloga infanto-juvenil, trabajando con material psicoeducativo">
+      <img class="about-photo" src="../images/isabel-foto.jpg" alt="Isabel Monte, psicóloga infanto-juvenil, trabajando con material psicoeducativo" data-i18n-attr="alt:aboutMe.photoAlt">
       <div class="about-text">
-        <h1>Sobre mí</h1>
-        <p>Soy Isabel Monte, psicóloga especializada en infancia, adolescencia y dificultades del neurodesarrollo. Mi trabajo se centra en ayudar a niños, niñas y jóvenes a gestionar sus emociones, superar dificultades y crecer con confianza, acompañando también a sus familias en este proceso.</p>
-        <p>Trabajo con niños, niñas, adolescentes y sus familias en la evaluación e intervención de dificultades como el TDAH, los trastornos del espectro autista, los trastornos del aprendizaje, los problemas de conducta y otras dificultades emocionales.</p>
-        <p>Ofrezco terapia psicológica y psicoeducativa desde un enfoque cercano, respetuoso, basado en la evidencia y adaptado a cada etapa evolutiva y a las necesidades de cada persona. Creo un espacio seguro donde el menor pueda expresarse con libertad y donde padres y madres encuentren orientación y apoyo real.</p>
-        <p>Atiendo en consulta en <strong>Alhendín (Granada)</strong> y también ofrezco <strong>sesiones online</strong> para quienes lo prefieran o no puedan desplazarse.</p>
+        <h1 data-i18n="aboutMe.title">Sobre mí</h1>
+        <p data-i18n="aboutMe.p1">Soy Isabel Monte, psicóloga especializada en infancia, adolescencia y dificultades del neurodesarrollo. Mi trabajo se centra en ayudar a niños, niñas y jóvenes a gestionar sus emociones, superar dificultades y crecer con confianza, acompañando también a sus familias en este proceso.</p>
+        <p data-i18n="aboutMe.p2">Trabajo con niños, niñas, adolescentes y sus familias en la evaluación e intervención de dificultades como el TDAH, los trastornos del espectro autista, los trastornos del aprendizaje, los problemas de conducta y otras dificultades emocionales.</p>
+        <p data-i18n="aboutMe.p3">Ofrezco terapia psicológica y psicoeducativa desde un enfoque cercano, respetuoso, basado en la evidencia y adaptado a cada etapa evolutiva y a las necesidades de cada persona. Creo un espacio seguro donde el menor pueda expresarse con libertad y donde padres y madres encuentren orientación y apoyo real.</p>
+        <p data-i18n-html="aboutMe.p4">Atiendo en consulta en <strong>Alhendín (Granada)</strong> y también ofrezco <strong>sesiones online</strong> para quienes lo prefieran o no puedan desplazarse.</p>
       </div>
     </div>
   </section>
@@ -61,10 +66,11 @@
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <p>&copy; <span id="year"></span> Isabel Monte · Psicóloga Infanto-Juvenil · Alhendín (Granada) · Nº Colegiada AO14821 · <a href="../privacy.html">Privacidad</a></p>
+    <p>&copy; <span id="year"></span> <span data-i18n-html="footer.linePages">Isabel Monte · Psicóloga Infanto-Juvenil · Alhendín (Granada) · Nº Colegiada AO14821 · <a href="../privacy.html">Privacidad</a></span></p>
   </div>
 </footer>
 
+<script src="../js/i18n.js"></script>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -76,7 +82,7 @@
     mainNav.classList.remove('is-open');
     menuBackdrop.classList.remove('is-visible');
     menuToggle.setAttribute('aria-expanded', 'false');
-    menuToggle.setAttribute('aria-label', 'Abrir menú');
+    menuToggle.setAttribute('aria-label', i18nText('common.menuOpen'));
     document.body.classList.remove('menu-open');
   }
 
@@ -84,7 +90,7 @@
     const isOpen = mainNav.classList.toggle('is-open');
     menuBackdrop.classList.toggle('is-visible', isOpen);
     menuToggle.setAttribute('aria-expanded', String(isOpen));
-    menuToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+    menuToggle.setAttribute('aria-label', isOpen ? i18nText('common.menuClose') : i18nText('common.menuOpen'));
     document.body.classList.toggle('menu-open', isOpen);
   });
 
@@ -94,6 +100,13 @@
     link.addEventListener('click', closeMenu);
   });
 </script>
+
+<a href="https://wa.me/34614727300" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" data-i18n-attr="aria-label:common.whatsappAria">
+  <span class="whatsapp-tooltip" data-i18n="whatsapp.tooltip">¡Hola, soy Isabel! ¿Hablamos?</span>
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.362.687 4.564 1.874 6.418L4 29l7.77-1.84A11.94 11.94 0 0 0 16 27c6.627 0 12-5.373 12-12S22.628 3 16.001 3zm0 21.6c-1.86 0-3.59-.51-5.08-1.4l-.364-.217-4.61 1.092 1.108-4.49-.238-.377A9.56 9.56 0 0 1 5.4 15c0-5.85 4.75-10.6 10.6-10.6S26.6 9.15 26.6 15 21.85 24.6 16.001 24.6zm5.78-7.93c-.317-.159-1.874-.925-2.164-1.03-.29-.106-.502-.159-.713.16-.212.317-.82 1.03-1.005 1.24-.185.212-.37.238-.687.08-.317-.16-1.336-.492-2.545-1.57-.94-.838-1.575-1.874-1.76-2.19-.185-.318-.02-.49.14-.649.144-.144.318-.37.476-.556.159-.185.212-.318.318-.53.106-.212.053-.397-.026-.556-.08-.16-.713-1.719-.978-2.354-.257-.617-.518-.534-.713-.544l-.607-.011c-.212 0-.556.08-.847.397-.29.318-1.11 1.084-1.11 2.644 0 1.56 1.137 3.067 1.296 3.279.159.212 2.24 3.42 5.43 4.797.759.328 1.35.524 1.812.671.762.243 1.454.209 2.002.127.611-.091 1.874-.766 2.138-1.505.264-.74.264-1.373.185-1.505-.08-.132-.29-.212-.607-.37z"/>
+  </svg>
+</a>
 
 </body>
 </html>
