@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cómo trabajo | Isabel Monte, Psicóloga Infanto-Juvenil</title>
+<meta name="description" content="Consulta presencial en Alhendín (Granada) o sesiones online, con la misma cercanía y seguimiento en ambas modalidades.">
+<meta property="og:title" content="Cómo trabajo | Isabel Monte">
+<meta property="og:description" content="Modalidad presencial y online de terapia infanto-juvenil.">
+<meta property="og:image" content="../images/logo.png">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="../images/logo.png">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand-lockup">
+      <a href="../index.html#inicio" class="logo-badge" aria-label="Ir al inicio">
+        <img src="../images/logo.png" alt="Isabel Monte Psicóloga" class="site-logo">
+      </a>
+      <div class="brand-copy">
+        <strong>Isabel Monte</strong>
+        <span>Psicóloga Infanto-Juvenil</span>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="../index.html#inicio" data-tooltip="Volvamos al inicio">Inicio</a>
+      <a href="specialties.html" data-tooltip="Conoce mis especialidades">Especialidades</a>
+      <a href="benefits.html" data-tooltip="Descubre cómo puede ayudar la terapia">Por qué la terapia</a>
+      <a href="about-me.html" data-tooltip="Conoce un poco más sobre mí">Sobre mí</a>
+      <a href="modality.html" data-tooltip="Presencial u online">Cómo trabajo</a>
+      <a href="blog.html" data-tooltip="Ideas para cuidar el bienestar">Blog</a>
+      <a href="contact.html" data-tooltip="Estoy aquí para escucharte">Contacto</a>
+      <a href="contact.html" class="nav-panel-cta" data-tooltip="Damos el primer paso juntas">Pedir cita</a>
+    </nav>
+    <button class="menu-toggle" type="button" aria-controls="mainMenu" aria-expanded="false" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="menu-backdrop" aria-hidden="true"></div>
+
+<main>
+
+  <section id="modalidad" class="section">
+    <div class="container">
+      <h1 class="section-title">Cómo trabajo</h1>
+      <div class="modalidad-grid">
+        <div class="modalidad-card">
+          <h3>Presencial</h3>
+          <p>Consulta en Alhendín, Granada. Un espacio tranquilo y cercano, pensado para que niños y adolescentes se sientan cómodos desde la primera sesión.</p>
+        </div>
+        <div class="modalidad-card">
+          <h3>Online</h3>
+          <p>Sesiones por videollamada con la misma cercanía y seguimiento que en consulta, ideales para familias que no pueden desplazarse o prefieren esta opción.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="year"></span> Isabel Monte · Psicóloga Infanto-Juvenil · Alhendín (Granada) · Nº Colegiada AO14821 · <a href="../privacy.html">Privacidad</a></p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mainNav = document.querySelector('.main-nav');
+  const menuBackdrop = document.querySelector('.menu-backdrop');
+
+  function closeMenu() {
+    mainNav.classList.remove('is-open');
+    menuBackdrop.classList.remove('is-visible');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Abrir menú');
+    document.body.classList.remove('menu-open');
+  }
+
+  menuToggle.addEventListener('click', function () {
+    const isOpen = mainNav.classList.toggle('is-open');
+    menuBackdrop.classList.toggle('is-visible', isOpen);
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+    document.body.classList.toggle('menu-open', isOpen);
+  });
+
+  menuBackdrop.addEventListener('click', closeMenu);
+
+  document.querySelectorAll('.main-nav a').forEach(function (link) {
+    link.addEventListener('click', closeMenu);
+  });
+</script>
+
+</body>
+</html>

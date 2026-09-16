@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto | Isabel Monte, Psicóloga Infanto-Juvenil</title>
+<meta name="description" content="Contacta con Isabel Monte, psicóloga infanto-juvenil en Alhendín (Granada), para pedir una primera cita presencial u online.">
+<meta property="og:title" content="Contacto | Isabel Monte">
+<meta property="og:description" content="Pide tu primera cita con Isabel Monte, psicóloga infanto-juvenil.">
+<meta property="og:image" content="../images/logo.png">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="../images/logo.png">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand-lockup">
+      <a href="../index.html#inicio" class="logo-badge" aria-label="Ir al inicio">
+        <img src="../images/logo.png" alt="Isabel Monte Psicóloga" class="site-logo">
+      </a>
+      <div class="brand-copy">
+        <strong>Isabel Monte</strong>
+        <span>Psicóloga Infanto-Juvenil</span>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="../index.html#inicio" data-tooltip="Volvamos al inicio">Inicio</a>
+      <a href="specialties.html" data-tooltip="Conoce mis especialidades">Especialidades</a>
+      <a href="benefits.html" data-tooltip="Descubre cómo puede ayudar la terapia">Por qué la terapia</a>
+      <a href="about-me.html" data-tooltip="Conoce un poco más sobre mí">Sobre mí</a>
+      <a href="modality.html" data-tooltip="Presencial u online">Cómo trabajo</a>
+      <a href="blog.html" data-tooltip="Ideas para cuidar el bienestar">Blog</a>
+      <a href="contact.html" data-tooltip="Estoy aquí para escucharte">Contacto</a>
+      <a href="contact.html" class="nav-panel-cta" data-tooltip="Damos el primer paso juntas">Pedir cita</a>
+    </nav>
+    <button class="menu-toggle" type="button" aria-controls="mainMenu" aria-expanded="false" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="menu-backdrop" aria-hidden="true"></div>
+
+<main>
+
+  <section id="contacto" class="section section-alt">
+    <div class="container contact-inner">
+      <div class="contact-info">
+        <p class="agenda-abierta">Agenda abierta</p>
+        <h1>Contacto</h1>
+        <p>Si tienes dudas o quieres pedir una primera cita, estaré encantada de atenderte.</p>
+        <ul class="contact-list">
+          <li>
+            <span class="contact-label">Consulta</span>
+            <span>Alhendín (Granada). La dirección exacta se facilita al confirmar la cita.</span>
+          </li>
+          <li>
+            <span class="contact-label">Colegiada</span>
+            <span>Nº Colegiada AO14821</span>
+          </li>
+        </ul>
+        <a class="btn btn-primary" href="https://wa.me/34614727300" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      </div>
+
+      <form class="contact-form" id="contactForm" action="https://formsubmit.co/ajax/isabelitablada@gmail.com" method="POST" novalidate>
+        <h3>Envíame un mensaje</h3>
+        <p class="privacy-note">No guardamos tus datos. El mensaje se envía directamente desde esta página.</p>
+
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="Nueva consulta web - Isabel Monte">
+        <input type="hidden" name="_autoresponse" value="Hola, gracias por contactar con Isabel Monte, Psicóloga Infanto-Juvenil. Hemos recibido correctamente tu mensaje y nos pondremos en contacto contigo lo antes posible. Un saludo, Isabel Monte Psicóloga.">
+
+        <div class="honeypot" aria-hidden="true">
+          <label for="website">No rellenar este campo</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefono">Teléfono (opcional)</label>
+        <input type="tel" id="telefono" name="telefono">
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <label class="consent-label" for="consentimiento">
+          <input type="checkbox" id="consentimiento" name="consentimiento" required>
+          <span>Acepto el tratamiento de mis datos para responder a mi consulta. He leído la <a href="../privacy.html" target="_blank" rel="noopener">política de privacidad</a>.</span>
+        </label>
+
+        <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="year"></span> Isabel Monte · Psicóloga Infanto-Juvenil · Alhendín (Granada) · Nº Colegiada AO14821 · <a href="../privacy.html">Privacidad</a></p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mainNav = document.querySelector('.main-nav');
+  const menuBackdrop = document.querySelector('.menu-backdrop');
+
+  function closeMenu() {
+    mainNav.classList.remove('is-open');
+    menuBackdrop.classList.remove('is-visible');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Abrir menú');
+    document.body.classList.remove('menu-open');
+  }
+
+  menuToggle.addEventListener('click', function () {
+    const isOpen = mainNav.classList.toggle('is-open');
+    menuBackdrop.classList.toggle('is-visible', isOpen);
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+    document.body.classList.toggle('menu-open', isOpen);
+  });
+
+  menuBackdrop.addEventListener('click', closeMenu);
+
+  document.querySelectorAll('.main-nav a').forEach(function (link) {
+    link.addEventListener('click', closeMenu);
+  });
+
+  const form = document.getElementById('contactForm');
+  const formStatus = document.querySelector('.form-status');
+
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const nombre = form.querySelector('#nombre').value.trim();
+    const email = form.querySelector('#email').value.trim();
+    const mensaje = form.querySelector('#mensaje').value.trim();
+    const consentimiento = form.querySelector('#consentimiento').checked;
+    const honeypot = form.querySelector('#website').value.trim();
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    formStatus.textContent = '';
+    formStatus.classList.remove('success', 'error');
+
+    if (honeypot) return;
+
+    if (!nombre || !email || !mensaje || !consentimiento) {
+      formStatus.textContent = 'Por favor, completa los campos obligatorios y acepta la política de privacidad.';
+      formStatus.classList.add('error');
+      return;
+    }
+
+    const formData = new FormData(form);
+
+    submitButton.disabled = true;
+    submitButton.textContent = 'Enviando...';
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        form.reset();
+        formStatus.textContent = '¡Gracias! Tu mensaje se ha enviado correctamente.';
+        formStatus.classList.add('success');
+      } else {
+        throw new Error('Error al enviar');
+      }
+    } catch (error) {
+      formStatus.textContent = 'No se pudo enviar el mensaje. Inténtalo de nuevo más tarde.';
+      formStatus.classList.add('error');
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = 'Enviar mensaje';
+    }
+  });
+</script>
+
+</body>
+</html>
