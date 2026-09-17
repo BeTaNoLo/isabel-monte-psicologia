@@ -56,10 +56,16 @@
 
         <blockquote class="hero-quote" data-i18n="home.hero.quote">
           A veces solo necesitas una mirada diferente, alguien que te explique el por qué, el cómo y el para qué de lo que sucede.
-        </blockquote>
-
+        </blockquote>        
         <div class="hero-actions">
-          <a href="https://wa.me/34614727300" target="_blank" rel="noopener" class="btn btn-primary has-tooltip" data-tooltip="Escríbeme y hablamos con calma" data-i18n="home.hero.cta" data-i18n-attr="data-tooltip:home.hero.ctaTooltip">Agenda abierta · WhatsApp</a>
+          <button
+            type="button"
+            class="btn btn-primary has-tooltip"
+            data-tooltip="Escríbeme y hablamos con calma"
+            data-i18n="home.hero.cta"
+            data-i18n-attr="data-tooltip:home.hero.ctaTooltip"
+            onclick="openWhatsApp()"> Agenda abierta · WhatsApp
+          </button>
         </div>
       </div>
       <div class="hero-visual" aria-hidden="true">
@@ -109,12 +115,28 @@
   });
 </script>
 
-<a href="https://wa.me/34614727300" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" data-i18n-attr="aria-label:common.whatsappAria">
+<!-- <a href="https://wa.me/34614727300" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" data-i18n-attr="aria-label:common.whatsappAria">
   <span class="whatsapp-tooltip" data-i18n="whatsapp.tooltip">¡Hola, soy Isabel! ¿Hablamos?</span>
   <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.362.687 4.564 1.874 6.418L4 29l7.77-1.84A11.94 11.94 0 0 0 16 27c6.627 0 12-5.373 12-12S22.628 3 16.001 3zm0 21.6c-1.86 0-3.59-.51-5.08-1.4l-.364-.217-4.61 1.092 1.108-4.49-.238-.377A9.56 9.56 0 0 1 5.4 15c0-5.85 4.75-10.6 10.6-10.6S26.6 9.15 26.6 15 21.85 24.6 16.001 24.6zm5.78-7.93c-.317-.159-1.874-.925-2.164-1.03-.29-.106-.502-.159-.713.16-.212.317-.82 1.03-1.005 1.24-.185.212-.37.238-.687.08-.317-.16-1.336-.492-2.545-1.57-.94-.838-1.575-1.874-1.76-2.19-.185-.318-.02-.49.14-.649.144-.144.318-.37.476-.556.159-.185.212-.318.318-.53.106-.212.053-.397-.026-.556-.08-.16-.713-1.719-.978-2.354-.257-.617-.518-.534-.713-.544l-.607-.011c-.212 0-.556.08-.847.397-.29.318-1.11 1.084-1.11 2.644 0 1.56 1.137 3.067 1.296 3.279.159.212 2.24 3.42 5.43 4.797.759.328 1.35.524 1.812.671.762.243 1.454.209 2.002.127.611-.091 1.874-.766 2.138-1.505.264-.74.264-1.373.185-1.505-.08-.132-.29-.212-.607-.37z"/>
   </svg>
-</a>
+</a> -->
+
+<button
+  type="button"
+  class="whatsapp-float"
+  onclick="openWhatsApp()"
+  aria-label="Contactar por WhatsApp"
+  data-i18n-attr="aria-label:common.whatsappAria"
+>
+  <span class="whatsapp-tooltip" data-i18n="whatsapp.tooltip">
+    ¡Hola, soy Isabel! ¿Hablamos?
+  </span>
+
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.362.687 4.564 1.874 6.418L4 29l7.77-1.84A11.94 11.94 0 0 0 16 27c6.627 0 12-5.373 12-12S22.628 3 16.001 3zm0 21.6c-1.86 0-3.59-.51-5.08-1.4l-.364-.217-4.61 1.092 1.108-4.49-.238-.377A9.56 9.56 0 0 1 5.4 15c0-5.85 4.75-10.6 10.6-10.6S26.6 9.15 26.6 15 21.85 24.6 16.001 24.6zm5.78-7.93c-.317-.159-1.874-.925-2.164-1.03-.29-.106-.502-.159-.713.16-.212.317-.82 1.03-1.005 1.24-.185.212-.37.238-.687.08-.317-.16-1.336-.492-2.545-1.57-.94-.838-1.575-1.874-1.76-2.19-.185-.318-.02-.49.14-.649.144-.144.318-.37.476-.556.159-.185.212-.318.318-.53.106-.212.053-.397-.026-.556-.08-.16-.713-1.719-.978-2.354-.257-.617-.518-.534-.713-.544l-.607-.011c-.212 0-.556.08-.847.397-.29.318-1.11 1.084-1.11 2.644 0 1.56 1.137 3.067 1.296 3.279.159.212 2.24 3.42 5.43 4.797.759.328 1.35.524 1.812.671.762.243 1.454.209 2.002.127.611-.091 1.874-.766 2.138-1.505.264-.74.264-1.373.185-1.505-.08-.132-.29-.212-.607-.37z"/>
+  </svg>
+</button>
 
 </body>
 </html>

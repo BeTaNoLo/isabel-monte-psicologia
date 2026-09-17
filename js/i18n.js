@@ -1,3 +1,7 @@
+function openWhatsApp() {
+  window.open("https://wa.me/34614727300", "_blank", "noopener,noreferrer");
+}
+
 (function () {
   var TRANSLATIONS = {
     es: {
@@ -641,3 +645,4 @@
 
   applyTranslations(getLang());
 })();
+
