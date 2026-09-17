@@ -990,6 +990,12 @@ section > .container { position: relative; z-index: 1; }
   .whatsapp-tooltip { font-size: 0.82rem; padding: 8px 14px; right: calc(100% + 10px); }
 }
 
+.whatsapp-float {
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
 /* ---------- Selector de idioma ---------- */
 .lang-switch {
   display: flex;

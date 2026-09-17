@@ -65,14 +65,13 @@
             <span data-i18n="contact.colegiadaText">Nº Colegiada AO14821</span>
           </li>
         </ul>
-        <a class="btn btn-primary" href="https://wa.me/34614727300" target="_blank" rel="noopener" data-i18n="contact.whatsappBtn">Escribir por WhatsApp</a>
+        <button type="button" class="btn btn-primary"  onclick="openWhatsApp()" data-i18n="contact.whatsappBtn">Escribir por WhatsApp</button>
       </div>
 
-      <form class="contact-form" id="contactForm" action="https://formsubmit.co/ajax/isabelitablada@gmail.com" method="POST" novalidate>
+      <form class="contact-form" id="contactForm" action="https://formsubmit.co/TU_TOKEN_FORM_SUBMIT" method="POST" novalidate>
         <h3 data-i18n="contact.formTitle">Envíame un mensaje</h3>
         <p class="privacy-note" data-i18n="contact.privacyNote">No guardamos tus datos. El mensaje se envía directamente desde esta página.</p>
 
-        <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_subject" value="Nueva consulta web - Isabel Monte">
         <input type="hidden" name="_autoresponse" value="Hola, gracias por contactar con Isabel Monte, Psicóloga Infanto-Juvenil. Hemos recibido correctamente tu mensaje y nos pondremos en contacto contigo lo antes posible. Un saludo, Isabel Monte Psicóloga.">
